@@ -1,0 +1,24 @@
+@import '@common/css/variables.scss';
+
+.button {
+  padding: 7px 12px;
+  border-radius: 7px;
+  background: var(--yellow-gradient);
+  box-shadow: 0px 0px 12px rgba(254, 181, 1, 0.45);
+  transition: $standartTransition;
+  &:hover {
+    box-shadow: none;
+  }
+  &:active {
+    transform: translateY(4px);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background: #656565;
+    color: #000;
+    box-shadow: none;
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

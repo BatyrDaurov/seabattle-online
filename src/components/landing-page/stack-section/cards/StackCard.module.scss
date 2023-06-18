@@ -1,0 +1,46 @@
+@import '@common/css/mixins.scss';
+.stack {
+  --border-color: #252525;
+  --bg-color: rgba(0, 0, 0, 0.2);
+
+  height: 100%;
+  padding: 32px 29px;
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  backdrop-filter: blur(2.5px);
+  border-radius: 15px;
+  &__icon {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3.5px);
+    border-radius: 8px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    @include media(766) {
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #888888;
+    @include media(767) {
+      font-size: 15px;
+      line-height: 135%;
+    }
+  }
+}

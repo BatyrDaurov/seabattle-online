@@ -1,0 +1,46 @@
+@import '@common/css/mixins.scss';
+
+.generation {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    button {
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
+  }
+  &__btn {
+    padding: 0;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    background-color: transparent;
+    color: var(--board-text-color);
+    @include media(767) {
+      font-size: 13px;
+      padding-bottom: 5px !important;
+    }
+  }
+  &__prompt {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #c9c9c9;
+    @include media(767) {
+      padding-bottom: 5px;
+      font-size: 13px;
+    }
+  }
+}

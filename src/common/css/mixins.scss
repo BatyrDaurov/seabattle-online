@@ -1,0 +1,71 @@
+/* @media breakpoints */
+@mixin media($var) {
+  @media (max-width: #{$var + '.98' + px}) {
+    @content;
+  }
+}
+
+/* Mobile menu */
+@mixin burger {
+  --burger-width: 30px;
+  --burger-height: 25px;
+  --burger-line-height: 2px;
+
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: #676767;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: calc(100% - var(--burger-line-height));
+  }
+
+  span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 60%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &_active {
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    span {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import '@common/css/mixins.scss';
+
+.connect {
+  max-width: 165px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media(1139) {
+    position: absolute;
+    top: 25%;
+    left: 48%;
+    width: 300px;
+    max-width: 300px;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    transform: translateX(-42%);
+  }
+  @include media(767) {
+    width: 240px;
+    max-width: 240px;
+  }
+  &__variants {
+    margin-bottom: 1rem;
+  }
+  &__variant {
+    cursor: pointer;
+    opacity: 0.45;
+    width: 100%;
+    padding: 5px 23px;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #ffb801;
+
+    border-radius: 10px;
+    border: 1px solid #ffb801;
+    background-color: #15120c;
+    &.connect__variant_active {
+      cursor: default;
+      opacity: 1;
+    }
+  }
+  li {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.shot {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  &::after {
+    content: '⚫';
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__hitted {
+    z-index: 15;
+    background-color: transparent;
+    &::after {
+      content: '❌' !important;
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

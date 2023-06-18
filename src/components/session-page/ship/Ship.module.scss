@@ -1,0 +1,11 @@
+.ship {
+  position: absolute;
+  z-index: 15;
+  border: 2px solid var(--myship-border-color);
+  background: var(--myship-fill-color);
+  &-enemy {
+    pointer-events: none;
+    border: 2px solid #d73535 !important;
+    background: #400505 !important;
+  }
+}

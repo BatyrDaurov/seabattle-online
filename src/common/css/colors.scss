@@ -1,0 +1,21 @@
+:root {
+  --primary-gradient: linear-gradient(89.78deg, #00d9d9 37.02%, #0094ff 97.73%);
+  --yellow-gradient: linear-gradient(90.55deg, #d96800 0.49%, #ffb800 99.54%);
+
+  /* global colors */
+  --body-color: #000000;
+  --body-text-color: #d3d3d3;
+
+  /* My theme */
+  --board-text-color: #63bdff;
+  --board-border-color: #135285;
+  --board-cell-color: #010f18;
+
+  --myship-fill-color: #5c381f;
+  --myship-border-color: #d78c35;
+
+  /* Enemy theme */
+  --enemyboard-text-color: #d6984f;
+  --enemyboard-border-color: #855113;
+  --enemyboard-cell-color: #180f01;
+}

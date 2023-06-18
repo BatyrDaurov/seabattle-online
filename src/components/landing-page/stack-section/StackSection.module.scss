@@ -1,0 +1,37 @@
+@import '@common/css/mixins.scss';
+
+.stacks {
+  position: relative;
+  margin-top: 20px;
+  @include media(1023) {
+    margin-top: 100px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 45px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    @include media(766) {
+      font-size: 32px;
+      line-height: 39px;
+    }
+    span {
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-color: transparent;
+      background-image: var(--primary-gradient);
+    }
+  }
+  &__list {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content;
+    @include media(766) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

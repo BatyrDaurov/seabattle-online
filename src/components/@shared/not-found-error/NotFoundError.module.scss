@@ -1,0 +1,22 @@
+.error {
+  margin-top: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 32px;
+  }
+  &__link {
+    font-weight: 700;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: transparent;
+    background-image: var(--primary-gradient);
+  }
+}

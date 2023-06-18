@@ -1,0 +1,104 @@
+@import '@common/css/variables.scss';
+@import '@common/css/mixins.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+
+  width: 100%;
+  height: $main-layout-header-size;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #2b2b2b;
+  /* Center */
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Burger */
+  &__burger {
+    @include burger;
+    display: none;
+    @include media(1024) {
+      display: block;
+    }
+  }
+  &__nav {
+    @include media(1024) {
+      position: fixed;
+      top: $main-layout-header-size;
+      right: -110%;
+      z-index: 99999;
+
+      height: calc(100vh - $main-layout-header-size);
+      width: 100vw;
+      padding: 15px;
+      padding-top: 4rem;
+      text-align: right;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      background-color: var(--body-color);
+      transition: $standartTransition;
+
+      &_active {
+        right: 0%;
+        touch-action: none;
+      }
+      .header__link {
+        margin-right: 0;
+        margin-bottom: 1.25rem;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+      }
+      .header__play {
+        font-size: 26px;
+        padding: 15px 20px;
+        max-width: none;
+      }
+    }
+  }
+  /* Style */
+  &__logo {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  &__link {
+    margin-right: 35px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #969696;
+    transition: $standartTransition;
+
+    &.active,
+    &:hover {
+      color: #e1e1e1;
+    }
+  }
+  &__play {
+    padding: 10px 20px;
+    max-width: 151px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    transition: $standartTransition;
+    border-radius: 7px;
+    box-shadow: 0px 0px 12px rgba(1, 152, 253, 0.6);
+    color: var(--body-color);
+    background: linear-gradient(89.78deg, #00d9d9 37.02%, #0094ff 97.73%);
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

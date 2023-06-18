@@ -1,0 +1,38 @@
+@import '@common/css/mixins.scss';
+
+.board-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  &__cell {
+    position: relative;
+    background-color: var(--board-cell-color);
+    border: 1px solid var(--board-border-color);
+    font-size: 12px;
+  }
+  &__hover {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+  }
+  &__hover:hover {
+    border: 2px solid #d73535;
+    background-color: #400505;
+    @include media(1139) {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.board-my {
+  .board-table__cell {
+    background-color: var(--enemyboard-cell-color);
+    border: 1px solid var(--enemyboard-border-color);
+  }
+}

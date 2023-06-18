@@ -1,0 +1,15 @@
+@import '@common/css/variables.scss';
+
+.button {
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  transition: $standartTransition;
+  border-radius: 7px;
+  box-shadow: 0px 0px 12px rgba(1, 152, 253, 0.6);
+  background: linear-gradient(89.78deg, #00d9d9 37.02%, #0094ff 97.73%);
+  &:hover {
+    box-shadow: none;
+  }
+}

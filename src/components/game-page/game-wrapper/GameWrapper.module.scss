@@ -1,0 +1,19 @@
+@import '@common/css/mixins.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 5rem;
+  @include media(1139) {
+    padding-top: 3rem;
+    justify-content: center;
+    &__session {
+      flex-direction: column-reverse;
+    }
+  }
+  @include media(576) {
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+}

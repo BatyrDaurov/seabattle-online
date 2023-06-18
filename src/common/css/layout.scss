@@ -1,0 +1,29 @@
+/* stylelint-disable */
+@use 'colors';
+@import './variables';
+@import './mixins.scss';
+
+/* Containers */
+.container {
+  position: relative;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin-inline: auto;
+}
+
+/* Add custom initial page css */
+main {
+  margin-top: $main-layout-header-size;
+  @include media(576) {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--body-text-color);
+  background-color: var(--body-color);
+}
