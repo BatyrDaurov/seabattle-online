@@ -34,10 +34,10 @@
     "husky",
     "lint staged"
   ],
-  "author": "Sanjay Twisk",
+  "author": "Batyr Daurov",
   "repository": {
     "type": "git",
-    "url": "git@github.com:sanjaytwisk/nextjs-ts.git"
+    "url": "https://github.com/BatyrDaurov/seabattle-online"
   },
   "license": "ISC",
   "dependencies": {
