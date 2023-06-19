@@ -9,8 +9,8 @@ export const animationsVariants = (
     }
   } else {
     return {
-      hidden: { opacity: 0, scale: 0, y: comeFrom === 'top' ? -100 : 100 },
-      visible: { opacity: 1, scale: 1, y: 0 },
+      hidden: { opacity: 0, y: comeFrom === 'top' ? -100 : 100 },
+      visible: { opacity: 1, y: 0 },
     }
   }
 }

@@ -27,16 +27,16 @@ export const StackSection: React.FC = () => {
       <ul className={s.stacks__list}>
         {stacks.map((stack: StackType, index: number) => (
           <motion.li
+            key={index}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={animationsVariants('column', 'bottom')}
             transition={{
-              duration: 1.1,
+              duration: 0.8,
               delay: 0.25 * index,
               type: 'spring',
             }}
-            key={index}
           >
             <StackCard {...stack} />
           </motion.li>
