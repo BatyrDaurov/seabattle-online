@@ -96,7 +96,7 @@ export const partySlice = createSlice({
         if (action.payload.floodedShip)
           state.enemy.ships = action.payload.floodedShip
       } else {
-        state.me.shots = filterShots(state.enemy.shots, action.payload.shots)
+        state.enemy.shots = filterShots(state.enemy.shots, action.payload.shots)
       }
     },
   },
