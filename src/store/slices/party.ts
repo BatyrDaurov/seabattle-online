@@ -61,12 +61,14 @@ export const partySlice = createSlice({
       state.me = {
         ...state.me,
         shots: [],
+        ships: [],
         ready: false,
         move: false,
       }
       state.enemy = {
         ...state.enemy,
         shots: [],
+        ships: [],
         ready: false,
         move: false,
       }
