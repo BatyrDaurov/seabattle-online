@@ -7,8 +7,8 @@ export const StackCard: React.FC<StackType> = (stack) => {
   const { image, title, description, bgColor, borderColor } = stack
 
   const cardStyles: any = {
-    '--bg-color': bgColor || '',
-    '--border-color': borderColor || '',
+    '--bg-color': bgColor || 'rgba(0, 0, 0, 0.2)',
+    '--border-color': borderColor || '#252525',
   }
 
   return (
